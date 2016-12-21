@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  战旗TV
+//
+//  Created by 黄建国 on 2016/9/28.
+//  Copyright © 2016年 apple. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+//#import "SVPullToRefresh.h"
+#import <UIColor+MCUIColorsUtils.h>
+#import <UIAlertView+Block.h>
+#import <UIActionSheet+Blocks.h>
+#import "UIImageView+AFNetworking.h"
+#import "NSDictionary+Accessors.h"
+#import <MJExtension.h>
+#import "UIImageView+WebCache.h"
+//#import "MobClick.h"
+#import <YTKRequest.h>
+#import "MJRefresh.h"
+
+//工具类
+#import "UIView+ChangeSize.h"
+#import "HJGNetworkManger.h"
+#import "Utilities.h"
+
+//#define PREFIX_URL @"http://www.zhanqi.tv/api/"
+#define APPURL_HomeList @"http://www.zhanqi.tv/api/static/live.index/recommend-apps.json?"
+#define APPURL_HomeBanner @"http://www.zhanqi.tv/api/touch/apps.banner?rand=1455848328344"
+#define APPURL_Live @"http://www.zhanqi.tv/api/static/live.hots/20-1.json"
+#define APPURL_Game @"http://www.zhanqi.tv/api/static/game.lists/12-"
+#define APPURL_GameList @"http://www.zhanqi.tv/api/static/game.lives/"
+#define APPURL_End @"http://www.zhanqi.tv/api/consultation/question"
+#define VIDEO_URL @"http://dlhls.cdn.zhanqi.tv/zqlive/"
+//适配
+#define W(float) [UIView setWidth:(float)]
+#define H(float) [UIView setHeight:(float)]
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define kNavigationBarHeight 44
+#define kStatusBarHeight 20
+#define kMarginTopHeight 64
+#define kTabBarHeight 49
+
+#endif /* PrefixHeader_pch */
+
+//----------------------ABOUT PRINTING LOG 打印日志 ----------------------------
+//Using dlog to print while in debug model.        调试状态下打印日志
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+//----------------------ABOUT COLOR 颜色相关 ----------------------------
+
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
