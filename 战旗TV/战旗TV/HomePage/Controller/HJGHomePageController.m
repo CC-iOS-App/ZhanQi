@@ -20,9 +20,9 @@
 #define IDENTIFIER_HEADER @"homeMenuHeader"
 #define IDENTIFIER_HEADERSECTION @"homeMenuHeaderSection"
 
-@interface HJGHomePageController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface HJGHomePageController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,HJGHomeCycleViewDelegate>
 //轮播器
-@property (nonatomic, strong) HJGHomeCycleView *homeCycleView;
+@property (nonatomic, strong) HJGHomeCycleView *cycleView;
 //collection
 @property (nonatomic, strong) UICollectionView *collection;
 //懒加载
@@ -119,10 +119,11 @@
     UICollectionReusableView *reusableview = nil;
     if (kind == UICollectionElementKindSectionHeader) {
         if (indexPath.section == 0) {
-            HJGHomeCycleView *cycleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_HEADER forIndexPath:indexPath];
-            cycleView.photoData = self.banderListData.copy;
-            cycleView.titleData = ((HJGHomeSectionModel *)self.sectionTitleData[indexPath.section]).title;
-            reusableview = cycleView;
+            self.cycleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_HEADER forIndexPath:indexPath];
+            self.cycleView.delegate = self;
+            self.cycleView.photoData = self.banderListData.copy;
+            self.cycleView.titleData = ((HJGHomeSectionModel *)self.sectionTitleData[indexPath.section]).title;
+            reusableview = self.cycleView;
         }else{
             HJGMenueHeader *sectionHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_HEADERSECTION forIndexPath:indexPath];
             sectionHeader.titleData = ((HJGHomeSectionModel *)self.sectionTitleData[indexPath.section]).title;
@@ -206,4 +207,10 @@
 
 }
 
+- (void)homeCycleView:(HJGHomeCycleView *)homeCycleView roomId:(NSString *)roomId{
+    HJGVideoPlayController *videoVC = [[HJGVideoPlayController alloc]init];
+    videoVC.videoID = roomId;
+    [self.navigationController pushViewController:videoVC animated:YES];
+
+}
 @end

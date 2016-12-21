@@ -420,7 +420,7 @@ NSString * const ID = @"cycleCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //如果用block就走block
-    self.kSelectIndex(indexPath.item % self.imagesGroup.count);
+//    self.kSelectIndex(indexPath.item % self.imagesGroup.count);
     //如果用代理就走代理
     if ([self.delegate respondsToSelector:@selector(cycleScrollView:didSelectItemAtIndex:)]) {
         [self.delegate cycleScrollView:self didSelectItemAtIndex:indexPath.item % self.imagesGroup.count];

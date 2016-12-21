@@ -28,7 +28,21 @@
     self.view.backgroundColor = [UIColor greenColor];
     [self createBasicConfig];
     [self playVideo];
-//    [self play];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self hiddenNaviGation];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.alpha = 1;
+}
+
+#pragma mark - 设置导航栏隐藏
+- (void)hiddenNaviGation{
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 #pragma mark - 播放视频
@@ -43,37 +57,12 @@
     [self.playerView.player play];
 }
 
-
-- (void)play{
-    NSURL*liveURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@.m3u8",VIDEO_URL , self.videoID]];
-    
-    AVAsset*liveAsset = [AVURLAsset URLAssetWithURL:liveURL options:nil];
-    
-    AVPlayerItem*playerItem = [AVPlayerItem playerItemWithAsset:liveAsset];
-    
-    AVPlayer*player = [AVPlayer playerWithPlayerItem:playerItem];
-    
-    AVPlayerLayer*playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-    
-    playerLayer.frame=self.view.layer.bounds;
-    
-    playerLayer.videoGravity=AVLayerVideoGravityResizeAspect;
-    
-    [self.view.layer addSublayer:playerLayer];
-    
-    [player play];
-
-    
-    
-}
-
-
 - (void)createBasicConfig{
     
-    _playerView=[[HJGPlayVideoView alloc]initWithFrame:CGRectMake(0, 20, WIDTH, 320)];
+    _playerView=[[HJGPlayVideoView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 320)];
     _myTransform = _playerView.layer.transform;
     [self.view addSubview: _playerView];
-    _swtichBtn  =  [UIButton ButtonWithRect:CGRectMake(WIDTH - 44, 310 , 44, 44) title:@"" titleColor:[UIColor whiteColor] BackgroundImageWithColor:[UIColor clearColor] clickAction:@selector(swtichAction) viewController:self titleFont:14 contentEdgeInsets:UIEdgeInsetsZero];
+    _swtichBtn  =  [UIButton ButtonWithRect:CGRectMake(WIDTH - 44, 250 , 44, 44) title:@"" titleColor:[UIColor whiteColor] BackgroundImageWithColor:[UIColor clearColor] clickAction:@selector(swtichAction) viewController:self titleFont:14 contentEdgeInsets:UIEdgeInsetsZero];
     [_swtichBtn setImage:[UIImage imageNamed:@"movie_fullscreen"] forState:UIControlStateNormal];
     [self.view addSubview:_swtichBtn];
     

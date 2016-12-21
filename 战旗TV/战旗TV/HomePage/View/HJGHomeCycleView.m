@@ -9,12 +9,15 @@
 #import "HJGHomeCycleView.h"
 #import "SDCycleScrollView.h"
 #import "HJGCycleListModel.h"
-@interface HJGHomeCycleView()
+@interface HJGHomeCycleView()<SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) SDCycleScrollView *cycleView;
 
 @property (nonatomic, strong) UILabel *title;
 
+@property (nonatomic, strong) NSMutableArray *roomIdArr;
+
+//@property (nonatomic, strong) NSMutableArray *urlArr;
 @end
 
 @implementation HJGHomeCycleView
@@ -27,9 +30,14 @@
 - (void)setPhotoData:(NSArray *)photoData{
     _photoData = photoData;
     NSMutableArray *imageArr = [NSMutableArray array];
+    self.roomIdArr = [NSMutableArray array];
+//    self.urlArr = [NSMutableArray array];
     for (HJGCycleListModel *model in photoData) {
         [imageArr addObject:model.spic];
+        [self.roomIdArr addObject:model.roomId];
+//        [self.urlArr addObject:model.ID];
     }
+    
     self.cycleView.imageURLStringsGroup = imageArr;
 }
 
@@ -53,6 +61,7 @@
     self.cycleView.dotColor = [UIColor redColor];
     self.cycleView.placeholderImage = [UIImage imageNamed:@"ic_logo_big"];
     SDCycleScrollView *cycleView = [[SDCycleScrollView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, H(170))];
+    self.cycleView.delegate = self;
     [cycleView addSubview:self.cycleView];
     [self addSubview:cycleView];
     
@@ -69,5 +78,11 @@
     
 }
 
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    if ([_delegate respondsToSelector:@selector(homeCycleView:roomId:)]) {
+        [_delegate homeCycleView:self roomId:self.roomIdArr[index]];
+    }
+
+}
 
 @end
