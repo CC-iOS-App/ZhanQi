@@ -90,7 +90,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HJGHomeCell *cell = (HJGHomeCell *)[collectionView dequeueReusableCellWithReuseIdentifier:IDENTIFIER_CELL forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.model = (HJGCollectionCellModel *)[self.liveListData objectAtIndex:indexPath.row];
+    if (self.liveListData) {
+            cell.model = (HJGCollectionCellModel *)[self.liveListData objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 

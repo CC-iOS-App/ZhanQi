@@ -82,6 +82,7 @@
     //获取网络数据
     [self getBanderData];
     [self getAnchorListData];
+    [self refresh];
 }
 
 - (void)firstLoading{
@@ -113,6 +114,23 @@
     }else{
         return CGSizeMake(WIDTH, H(40));
     }
+}
+
+#pragma mark - 刷新数据
+- (void)refresh{
+
+    self.collection.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        [self.sectionTitleData removeAllObjects];
+        [self.banderData removeAllObjects];
+        [self.banderListData removeAllObjects];
+        [self.sectionData removeAllObjects];
+        [self.avatarData removeAllObjects];
+        
+        
+        //重新获取网络数据
+        [self getBanderData];
+        [self getAnchorListData];
+    }];
 }
 
 #pragma mark - 组头
@@ -150,7 +168,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HJGHomeCell *cell = (HJGHomeCell *)[collectionView dequeueReusableCellWithReuseIdentifier:IDENTIFIER_CELL forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.model = (HJGCollectionCellModel *)[[self.sectionData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    if (self.sectionData) {
+            cell.model = (HJGCollectionCellModel *)[[self.sectionData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 
@@ -198,6 +218,8 @@
     } failureBlock:^(NSError *error) {
         NSLog(@"获取数据失败");
     }];
+    
+    [self.collection.mj_header endRefreshing];
 
 }
 
