@@ -35,11 +35,12 @@
 //#define PREFIX_URL @"http://www.zhanqi.tv/api/"
 #define APPURL_HomeList @"http://www.zhanqi.tv/api/static/live.index/recommend-apps.json?"
 #define APPURL_HomeBanner @"http://www.zhanqi.tv/api/touch/apps.banner?rand=1455848328344"
-#define APPURL_Live @"http://www.zhanqi.tv/api/static/live.hots/20-1.json"
+#define APPURL_Live @"http://www.zhanqi.tv/api/static/live.hots/20-"
 #define APPURL_Game @"http://www.zhanqi.tv/api/static/game.lists/12-"
 #define APPURL_GameList @"http://www.zhanqi.tv/api/static/game.lives/"
 #define APPURL_End @"http://www.zhanqi.tv/api/consultation/question"
 #define VIDEO_URL @"http://dlhls.cdn.zhanqi.tv/zqlive/"
+
 //适配
 #define W(float) [UIView setWidth:(float)]
 #define H(float) [UIView setHeight:(float)]

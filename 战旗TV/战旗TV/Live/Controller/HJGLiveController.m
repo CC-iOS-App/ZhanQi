@@ -9,6 +9,7 @@
 #import "HJGLiveController.h"
 #import "HJGHomeCell.h"
 #import "HJGCollectionCellModel.h"
+#import "HJGVideoPlayController.h"
 
 #define IDENTIFIER_CELL @"homeMenuCell"
 @interface HJGLiveController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) UICollectionView *collection;
 
 @property (nonatomic, strong) NSMutableArray *liveListData;
+
+@property (nonatomic, assign) int page;
 
 @end
 
@@ -34,10 +37,12 @@
     self.view.backgroundColor = [UIColor orangeColor];
     [self firstLoad];
     [self getLiveListData];
+    [self refresh];
 }
 
 - (void)firstLoad{
     //collection
+    self.page = 1;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
@@ -51,6 +56,21 @@
     
     [self.collection registerClass:[HJGHomeCell class] forCellWithReuseIdentifier:IDENTIFIER_CELL];
     [self.view addSubview:self.collection];
+}
+
+#pragma mark - 上拉刷新 下拉刷新
+- (void)refresh{
+
+    self.collection.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.page = 1;
+        [self.liveListData removeAllObjects];
+        [self getLiveListData];
+    }];
+    
+    self.collection.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        self.page = self.page + 1;
+        [self getLiveListData];
+    }];
 }
 
 #pragma mark - collectionDelegate and dataSourse
@@ -86,10 +106,18 @@
             [self.liveListData addObject:model];
         }];
         [self.collection reloadData];
-    } failureBlock:^(NSError *error) {
+    } failureBlock:^(NSError *error){
         NSLog(@"获取数据失败");
-    }];
+    } page:[NSString stringWithFormat:@"%d",self.page]
+     ];
+    
+    [self.collection.mj_header endRefreshing];
+    [self.collection.mj_footer endRefreshing];
+}
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    HJGVideoPlayController *videoVC = [[HJGVideoPlayController alloc]init];
+    videoVC.videoID = ((HJGCollectionCellModel *)self.liveListData[indexPath.row]).videoId;
+    [self.navigationController pushViewController:videoVC animated:YES];
 }
 @end

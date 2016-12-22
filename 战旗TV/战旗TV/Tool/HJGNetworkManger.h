@@ -22,8 +22,11 @@ typedef void (^HJGRequestBlock)(YTKBaseRequest *request);
 - (void)getHomeBanderDataSuccessBlock:(void (^)(int code, NSDictionary *responDic))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
 
 //获取直播页面数据
-- (void)getLiveListDataSuccessBlock:(void (^)(int code, NSDictionary *responDic))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
+- (void)getLiveListDataSuccessBlock:(void (^)(int code, NSDictionary *responDic))successBlock failureBlock:(void (^)(NSError *error))failureBlock page:(NSString *)page;
 
 //获取游戏页面数据
 - (void)getGameData:(NSString *)pageStr SuccessBlock:(void (^)(int code, NSDictionary *responDic))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
+
+//获取游戏列表数据
+- (void)getGameListData:(NSString *)pageStr SuccessBlock:(void (^)(int code, NSDictionary *responDic))successBlock failureBlock:(void (^)(NSError *error))failureBlock gameID:(NSString *)gameID;
 @end

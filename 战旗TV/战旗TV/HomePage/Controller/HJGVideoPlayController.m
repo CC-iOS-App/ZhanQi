@@ -32,7 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self hiddenNaviGation];
+//    [self hiddenNaviGation];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -91,4 +91,5 @@
 
 
 @end
+
 

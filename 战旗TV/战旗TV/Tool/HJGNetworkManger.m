@@ -48,11 +48,12 @@
     }];
 }
 
-- (void)getLiveListDataSuccessBlock:(void (^)(int, NSDictionary *))successBlock failureBlock:(void (^)(NSError *))failureBlock{
+- (void)getLiveListDataSuccessBlock:(void (^)(int, NSDictionary *))successBlock failureBlock:(void (^)(NSError *))failureBlock page:(NSString *)page{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/plain",@"text/html", nil];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    operation = [manager GET:APPURL_Live parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    NSString *live = [NSString stringWithFormat:@"%@%@.json",APPURL_Live,page];
+    operation = [manager GET:live parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if (![responseObject isKindOfClass:[NSDictionary class]]) {
             NSLog(@"返回格式错误");
             return;
@@ -82,6 +83,27 @@
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         NSLog(@"请求数据失败");
     }];
+}
+
+#pragma mark - 获取游戏列表数据
+- (void)getGameListData:(NSString *)pageStr SuccessBlock:(void (^)(int, NSDictionary *))successBlock failureBlock:(void (^)(NSError *))failureBlock gameID:(NSString *)gameID{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/plain",@"text/html", nil];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    NSString *gameListUrl = [NSString stringWithFormat:@"%@/%@/20-%@.json",APPURL_GameList,gameID,pageStr];
+    operation = [manager GET:gameListUrl parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"返回格式错误");
+            return;
+        }
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        int code = [dic intForKey:@"code"];
+        successBlock(code, dic);
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        NSLog(@"请求数据失败");
+    }];
+
+
 }
 
 @end

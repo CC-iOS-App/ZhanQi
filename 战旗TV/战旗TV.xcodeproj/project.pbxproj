@@ -20,6 +20,7 @@
 		E9A572CF1D9CC3AC000EC4B6 /* HJGMenueHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A572CE1D9CC3AC000EC4B6 /* HJGMenueHeader.m */; };
 		E9ABD5581E0A65440074C1B8 /* home_return@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ABD5561E0A65440074C1B8 /* home_return@2x.png */; };
 		E9ABD5591E0A65440074C1B8 /* home_return@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ABD5571E0A65440074C1B8 /* home_return@3x.png */; };
+		E9ABD55C1E0B78E90074C1B8 /* HJGGameListController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9ABD55B1E0B78E90074C1B8 /* HJGGameListController.m */; };
 		E9C458B61D9B948800070852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C458B51D9B948800070852 /* main.m */; };
 		E9C458B91D9B948800070852 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C458B81D9B948800070852 /* AppDelegate.m */; };
 		E9C458C11D9B948800070852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C458C01D9B948800070852 /* Assets.xcassets */; };
@@ -458,6 +459,8 @@
 		E9A572CE1D9CC3AC000EC4B6 /* HJGMenueHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGMenueHeader.m; sourceTree = "<group>"; };
 		E9ABD5561E0A65440074C1B8 /* home_return@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_return@2x.png"; sourceTree = "<group>"; };
 		E9ABD5571E0A65440074C1B8 /* home_return@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_return@3x.png"; sourceTree = "<group>"; };
+		E9ABD55A1E0B78E90074C1B8 /* HJGGameListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameListController.h; sourceTree = "<group>"; };
+		E9ABD55B1E0B78E90074C1B8 /* HJGGameListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGGameListController.m; sourceTree = "<group>"; };
 		E9C458B11D9B948700070852 /* 战旗TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "战旗TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C458B51D9B948800070852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9C458B71D9B948800070852 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -939,6 +942,7 @@
 		E9C458B31D9B948800070852 /* 战旗TV */ = {
 			isa = PBXGroup;
 			children = (
+				E9C45BCB1D9BA13400070852 /* HomePage */,
 				E9C45BC61D9BA13400070852 /* Category */,
 				E9C45BC71D9BA13400070852 /* Game */,
 				E9C45BCF1D9BA13400070852 /* Live */,
@@ -1372,7 +1376,6 @@
 		E9C45BC71D9BA13400070852 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				E9C45BCB1D9BA13400070852 /* HomePage */,
 				E9C45BC81D9BA13400070852 /* Controller */,
 				E9C45BC91D9BA13400070852 /* Model */,
 				E9C45BCA1D9BA13400070852 /* View */,
@@ -1385,6 +1388,8 @@
 			children = (
 				E9C45BDB1D9BA16100070852 /* HJGGameController.h */,
 				E9C45BDC1D9BA16100070852 /* HJGGameController.m */,
+				E9ABD55A1E0B78E90074C1B8 /* HJGGameListController.h */,
+				E9ABD55B1E0B78E90074C1B8 /* HJGGameListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1414,8 +1419,7 @@
 				E9C45BCD1D9BA13400070852 /* Model */,
 				E9C45BCE1D9BA13400070852 /* View */,
 			);
-			name = HomePage;
-			path = ../HomePage;
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		E9C45BCC1D9BA13400070852 /* Controller */ = {
@@ -2140,6 +2144,7 @@
 				E9783D3D1D9D0DC7006EFF71 /* Utilities.m in Sources */,
 				E9783D341D9CF89E006EFF71 /* HJGGameCellModel.m in Sources */,
 				E9783D371D9D0A30006EFF71 /* HJGVideoPlayController.m in Sources */,
+				E9ABD55C1E0B78E90074C1B8 /* HJGGameListController.m in Sources */,
 				E9C45BE01D9BA16E00070852 /* HJGHomeCell.m in Sources */,
 				E9C45C131D9BA20000070852 /* SDCollectionViewCell.m in Sources */,
 				E9A572CF1D9CC3AC000EC4B6 /* HJGMenueHeader.m in Sources */,

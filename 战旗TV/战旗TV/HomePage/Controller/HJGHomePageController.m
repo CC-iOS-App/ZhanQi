@@ -202,7 +202,14 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     HJGVideoPlayController *videoVC = [[HJGVideoPlayController alloc]init];
-    videoVC.videoID = ((HJGCollectionCellModel *)[[self.sectionData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]).videoId;
+    NSString *videoID = ((HJGCollectionCellModel *)[[self.sectionData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]).videoId;
+    NSString *urlID = ((HJGCollectionCellModel *)[[self.sectionData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]).spic;
+    NSString *shutId = [urlID substringWithRange:NSMakeRange(37, 12)];
+    if (videoID) {
+        videoVC.videoID = videoID;
+    }else{
+        videoVC.videoID = shutId;
+    }
     [self.navigationController pushViewController:videoVC animated:YES];
 
 }
