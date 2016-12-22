@@ -35,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    self.title = @"游戏";
     [self firstLoad];
     self.page = 1;
     [self getGameData:self.page];

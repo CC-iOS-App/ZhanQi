@@ -35,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
+    self.title = @"直播";
     [self firstLoad];
     [self getLiveListData];
     [self refresh];

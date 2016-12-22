@@ -77,6 +77,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"首页";
     [self firstLoading];
     //获取网络数据
     [self getBanderData];
@@ -220,4 +221,5 @@
     [self.navigationController pushViewController:videoVC animated:YES];
 
 }
+
 @end

@@ -9,7 +9,6 @@
 #import "HJGNavigationController.h"
 
 @interface HJGNavigationController ()
-
 @end
 
 @implementation HJGNavigationController
@@ -17,7 +16,7 @@
 + (void)initialize
 {
     UINavigationBar *bar = [UINavigationBar appearance];
-    bar.barTintColor = [UIColor colorWithHexRGB:0xd71718];
+    bar.barTintColor = [UIColor colorWithHexRGB:0x589FF5];
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
 }

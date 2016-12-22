@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12EDBC95E2F87A4509AD3D70 /* libPods-战旗TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 232A4F8AB5FD0771B7E7B68D /* libPods-战旗TV.a */; };
+		E9474DA01E0BB9C800719188 /* minebg.png in Resources */ = {isa = PBXBuildFile; fileRef = E9474D9F1E0BB9C800719188 /* minebg.png */; };
 		E9783D311D9CEEFD006EFF71 /* HJGGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */; };
 		E9783D341D9CF89E006EFF71 /* HJGGameCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D331D9CF89E006EFF71 /* HJGGameCellModel.m */; };
 		E9783D371D9D0A30006EFF71 /* HJGVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D361D9D0A30006EFF71 /* HJGVideoPlayController.m */; };
@@ -437,6 +438,7 @@
 		05BCEFADC4B5B59F095A99D2 /* Pods-战旗TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-战旗TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-战旗TV/Pods-战旗TV.release.xcconfig"; sourceTree = "<group>"; };
 		232A4F8AB5FD0771B7E7B68D /* libPods-战旗TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-战旗TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A207F5D6A1E398E9014F1094 /* Pods-战旗TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-战旗TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-战旗TV/Pods-战旗TV.debug.xcconfig"; sourceTree = "<group>"; };
+		E9474D9F1E0BB9C800719188 /* minebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minebg.png; sourceTree = "<group>"; };
 		E9783D2F1D9CEEFD006EFF71 /* HJGGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCell.h; sourceTree = "<group>"; };
 		E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGGameCell.m; sourceTree = "<group>"; };
 		E9783D321D9CF89E006EFF71 /* HJGGameCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCellModel.h; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 		E9C458E71D9B95D400070852 /* 战旗资源 */ = {
 			isa = PBXGroup;
 			children = (
+				E9474D9F1E0BB9C800719188 /* minebg.png */,
 				E9ABD5561E0A65440074C1B8 /* home_return@2x.png */,
 				E9ABD5571E0A65440074C1B8 /* home_return@3x.png */,
 				E9C458E81D9B95D400070852 /* AppIcon29x29.png */,
@@ -1955,6 +1958,7 @@
 				E9C45B741D9B95D600070852 /* LaunchImage-700-568h@2x.png in Resources */,
 				E9C45B0F1D9B95D600070852 /* ic_level_wz_02@2x.png in Resources */,
 				E9C45B111D9B95D600070852 /* ic_level_wz_03@2x.png in Resources */,
+				E9474DA01E0BB9C800719188 /* minebg.png in Resources */,
 				E9C45B3A1D9B95D600070852 /* ic_medal_24@2x.png in Resources */,
 				E9C45B011D9B95D600070852 /* ic_level_qt_01_no@2x.png in Resources */,
 				E9C45B6F1D9B95D600070852 /* icon_room_female@2x.png in Resources */,
