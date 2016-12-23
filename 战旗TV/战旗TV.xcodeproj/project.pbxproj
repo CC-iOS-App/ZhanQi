@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		12EDBC95E2F87A4509AD3D70 /* libPods-战旗TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 232A4F8AB5FD0771B7E7B68D /* libPods-战旗TV.a */; };
 		E9474DA01E0BB9C800719188 /* minebg.png in Resources */ = {isa = PBXBuildFile; fileRef = E9474D9F1E0BB9C800719188 /* minebg.png */; };
+		E9474DA21E0BD63F00719188 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA11E0BD63F00719188 /* libsqlite3.tbd */; };
+		E9474DA41E0BD67200719188 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA31E0BD67200719188 /* SystemConfiguration.framework */; };
+		E9474DA61E0BD68100719188 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA51E0BD68100719188 /* CoreTelephony.framework */; };
+		E9474DA81E0BD69A00719188 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA71E0BD69900719188 /* libc++.tbd */; };
+		E9474DAA1E0BD6A900719188 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA91E0BD6A900719188 /* libz.tbd */; };
 		E9783D311D9CEEFD006EFF71 /* HJGGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */; };
 		E9783D341D9CF89E006EFF71 /* HJGGameCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D331D9CF89E006EFF71 /* HJGGameCellModel.m */; };
 		E9783D371D9D0A30006EFF71 /* HJGVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D361D9D0A30006EFF71 /* HJGVideoPlayController.m */; };
@@ -439,6 +444,11 @@
 		232A4F8AB5FD0771B7E7B68D /* libPods-战旗TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-战旗TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A207F5D6A1E398E9014F1094 /* Pods-战旗TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-战旗TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-战旗TV/Pods-战旗TV.debug.xcconfig"; sourceTree = "<group>"; };
 		E9474D9F1E0BB9C800719188 /* minebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minebg.png; sourceTree = "<group>"; };
+		E9474DA11E0BD63F00719188 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E9474DA31E0BD67200719188 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E9474DA51E0BD68100719188 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E9474DA71E0BD69900719188 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		E9474DA91E0BD6A900719188 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E9783D2F1D9CEEFD006EFF71 /* HJGGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCell.h; sourceTree = "<group>"; };
 		E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGGameCell.m; sourceTree = "<group>"; };
 		E9783D321D9CF89E006EFF71 /* HJGGameCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCellModel.h; sourceTree = "<group>"; };
@@ -890,6 +900,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9474DAA1E0BD6A900719188 /* libz.tbd in Frameworks */,
+				E9474DA81E0BD69A00719188 /* libc++.tbd in Frameworks */,
+				E9474DA61E0BD68100719188 /* CoreTelephony.framework in Frameworks */,
+				E9474DA41E0BD67200719188 /* SystemConfiguration.framework in Frameworks */,
+				E9474DA21E0BD63F00719188 /* libsqlite3.tbd in Frameworks */,
 				12EDBC95E2F87A4509AD3D70 /* libPods-战旗TV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -914,6 +929,11 @@
 		DCF3244C758118E1AD5E008C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9474DA91E0BD6A900719188 /* libz.tbd */,
+				E9474DA71E0BD69900719188 /* libc++.tbd */,
+				E9474DA51E0BD68100719188 /* CoreTelephony.framework */,
+				E9474DA31E0BD67200719188 /* SystemConfiguration.framework */,
+				E9474DA11E0BD63F00719188 /* libsqlite3.tbd */,
 				232A4F8AB5FD0771B7E7B68D /* libPods-战旗TV.a */,
 			);
 			name = Frameworks;

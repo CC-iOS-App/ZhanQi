@@ -19,6 +19,9 @@
 @property (nonatomic ,strong)  UIButton  *swtichBtn;
 @property (nonatomic, assign) CATransform3D myTransform;
 
+//横屏缩回按钮
+@property (nonatomic, strong) UIButton *backSwtichBut;
+
 @end
 
 @implementation HJGVideoPlayController
@@ -62,33 +65,51 @@
     _playerView=[[HJGPlayVideoView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 320)];
     _myTransform = _playerView.layer.transform;
     [self.view addSubview: _playerView];
-    _swtichBtn  =  [UIButton ButtonWithRect:CGRectMake(WIDTH - 44, 250 , 44, 44) title:@"" titleColor:[UIColor whiteColor] BackgroundImageWithColor:[UIColor clearColor] clickAction:@selector(swtichAction) viewController:self titleFont:14 contentEdgeInsets:UIEdgeInsetsZero];
+    _swtichBtn  =  [UIButton ButtonWithRect:CGRectMake(WIDTH - 44, 240 , 44, 44) title:@"" titleColor:[UIColor whiteColor] BackgroundImageWithColor:[UIColor clearColor] clickAction:@selector(swtichTouch) viewController:self titleFont:14 contentEdgeInsets:UIEdgeInsetsZero];
     [_swtichBtn setImage:[UIImage imageNamed:@"movie_fullscreen"] forState:UIControlStateNormal];
     [self.view addSubview:_swtichBtn];
     
+    _backSwtichBut = [UIButton ButtonWithRect:CGRectMake(44, HEIGHT - 60, 44, 44) title:@"缩小" titleColor:[UIColor whiteColor] BackgroundImageWithColor:[UIColor clearColor] clickAction:@selector(backSwtichTouch) viewController:self titleFont:14 contentEdgeInsets:UIEdgeInsetsZero];
+    [_backSwtichBut setImage:[UIImage imageNamed:@"movie_fullscreen"] forState:UIControlStateNormal];
+    [self.view addSubview:_backSwtichBut];
+    _backSwtichBut.hidden = YES;
 }
 
-- (void)swtichAction{
-    
+
+//因为想要手动旋转，所以先关闭自动旋转
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+
+
+- (void)swtichTouch{
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     _playerView.frame = CGRectMake(0, 0, HEIGHT, WIDTH);
     _swtichBtn.hidden=YES;
-    
+    _backSwtichBut.hidden = NO;
     self.navigationController.navigationBarHidden=YES;
-    [UIView animateWithDuration:0.3 animations:^{
-        CATransform3D transform = CATransform3DMakeRotation(M_PI / 2, 0, 0, 1.0);
-        _playerView.layer.transform  =  transform;
-        _playerView.center = self.view.center;
-        self.navigationController.navigationBar.alpha=0;
-        
-    } completion:^(BOOL finished) {
-        _playerView.center = self.view.center;
-        
-        self.navigationController.navigationBar.alpha=1;
-        self.navigationController.navigationBar.hidden=NO;
-    }];
+    
+    //旋转屏幕，但是只旋转当前的View
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
+    _playerView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    _playerView.center = self.view.center;
+    
 }
 
+- (void)backSwtichTouch{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    _swtichBtn.hidden = NO;
+    _backSwtichBut.hidden = YES;
+    self.navigationController.navigationBarHidden = NO;
+    
+    //旋转屏幕，但是只旋转当前的View
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft];
+    _playerView.transform = CGAffineTransformIdentity;
+    _playerView.frame = CGRectMake(0, 0, WIDTH, 320);
+    
+
+}
 
 @end
 
