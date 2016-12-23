@@ -14,6 +14,14 @@
 		E9474DA61E0BD68100719188 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA51E0BD68100719188 /* CoreTelephony.framework */; };
 		E9474DA81E0BD69A00719188 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA71E0BD69900719188 /* libc++.tbd */; };
 		E9474DAA1E0BD6A900719188 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9474DA91E0BD6A900719188 /* libz.tbd */; };
+		E9474DAD1E0CBFCB00719188 /* HJGVideoPlaySelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DAC1E0CBFCB00719188 /* HJGVideoPlaySelectedView.m */; };
+		E9474DB01E0CC18F00719188 /* venues_slide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9474DAE1E0CC18F00719188 /* venues_slide@2x.png */; };
+		E9474DB11E0CC18F00719188 /* venues_slide@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9474DAF1E0CC18F00719188 /* venues_slide@3x.png */; };
+		E9474DB41E0CC76A00719188 /* HJGVideoPlayMenueView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DB31E0CC76A00719188 /* HJGVideoPlayMenueView.m */; };
+		E9474DB71E0CC82F00719188 /* HJGVideoPlayAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DB61E0CC82F00719188 /* HJGVideoPlayAvatarView.m */; };
+		E9474DBA1E0CC85600719188 /* HJGVideoPlayChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DB91E0CC85600719188 /* HJGVideoPlayChatView.m */; };
+		E9474DBD1E0CC87300719188 /* HJGVideoPlayActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DBC1E0CC87300719188 /* HJGVideoPlayActivityView.m */; };
+		E9474DC01E0CC89300719188 /* HJGVideoPlayPaihangView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9474DBF1E0CC89300719188 /* HJGVideoPlayPaihangView.m */; };
 		E9783D311D9CEEFD006EFF71 /* HJGGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */; };
 		E9783D341D9CF89E006EFF71 /* HJGGameCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D331D9CF89E006EFF71 /* HJGGameCellModel.m */; };
 		E9783D371D9D0A30006EFF71 /* HJGVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9783D361D9D0A30006EFF71 /* HJGVideoPlayController.m */; };
@@ -449,6 +457,20 @@
 		E9474DA51E0BD68100719188 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E9474DA71E0BD69900719188 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		E9474DA91E0BD6A900719188 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E9474DAB1E0CBFCB00719188 /* HJGVideoPlaySelectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlaySelectedView.h; sourceTree = "<group>"; };
+		E9474DAC1E0CBFCB00719188 /* HJGVideoPlaySelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlaySelectedView.m; sourceTree = "<group>"; };
+		E9474DAE1E0CC18F00719188 /* venues_slide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "venues_slide@2x.png"; sourceTree = "<group>"; };
+		E9474DAF1E0CC18F00719188 /* venues_slide@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "venues_slide@3x.png"; sourceTree = "<group>"; };
+		E9474DB21E0CC76A00719188 /* HJGVideoPlayMenueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlayMenueView.h; sourceTree = "<group>"; };
+		E9474DB31E0CC76A00719188 /* HJGVideoPlayMenueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlayMenueView.m; sourceTree = "<group>"; };
+		E9474DB51E0CC82F00719188 /* HJGVideoPlayAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlayAvatarView.h; sourceTree = "<group>"; };
+		E9474DB61E0CC82F00719188 /* HJGVideoPlayAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlayAvatarView.m; sourceTree = "<group>"; };
+		E9474DB81E0CC85600719188 /* HJGVideoPlayChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlayChatView.h; sourceTree = "<group>"; };
+		E9474DB91E0CC85600719188 /* HJGVideoPlayChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlayChatView.m; sourceTree = "<group>"; };
+		E9474DBB1E0CC87300719188 /* HJGVideoPlayActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlayActivityView.h; sourceTree = "<group>"; };
+		E9474DBC1E0CC87300719188 /* HJGVideoPlayActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlayActivityView.m; sourceTree = "<group>"; };
+		E9474DBE1E0CC89300719188 /* HJGVideoPlayPaihangView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGVideoPlayPaihangView.h; sourceTree = "<group>"; };
+		E9474DBF1E0CC89300719188 /* HJGVideoPlayPaihangView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGVideoPlayPaihangView.m; sourceTree = "<group>"; };
 		E9783D2F1D9CEEFD006EFF71 /* HJGGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCell.h; sourceTree = "<group>"; };
 		E9783D301D9CEEFD006EFF71 /* HJGGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGGameCell.m; sourceTree = "<group>"; };
 		E9783D321D9CF89E006EFF71 /* HJGGameCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGGameCellModel.h; sourceTree = "<group>"; };
@@ -1010,6 +1032,8 @@
 		E9C458E71D9B95D400070852 /* 战旗资源 */ = {
 			isa = PBXGroup;
 			children = (
+				E9474DAE1E0CC18F00719188 /* venues_slide@2x.png */,
+				E9474DAF1E0CC18F00719188 /* venues_slide@3x.png */,
 				E9474D9F1E0BB9C800719188 /* minebg.png */,
 				E9ABD5561E0A65440074C1B8 /* home_return@2x.png */,
 				E9ABD5571E0A65440074C1B8 /* home_return@3x.png */,
@@ -1482,6 +1506,18 @@
 				E9A572CE1D9CC3AC000EC4B6 /* HJGMenueHeader.m */,
 				E9783D381D9D0AFE006EFF71 /* HJGPlayVideoView.h */,
 				E9783D391D9D0AFE006EFF71 /* HJGPlayVideoView.m */,
+				E9474DAB1E0CBFCB00719188 /* HJGVideoPlaySelectedView.h */,
+				E9474DAC1E0CBFCB00719188 /* HJGVideoPlaySelectedView.m */,
+				E9474DB21E0CC76A00719188 /* HJGVideoPlayMenueView.h */,
+				E9474DB31E0CC76A00719188 /* HJGVideoPlayMenueView.m */,
+				E9474DB51E0CC82F00719188 /* HJGVideoPlayAvatarView.h */,
+				E9474DB61E0CC82F00719188 /* HJGVideoPlayAvatarView.m */,
+				E9474DB81E0CC85600719188 /* HJGVideoPlayChatView.h */,
+				E9474DB91E0CC85600719188 /* HJGVideoPlayChatView.m */,
+				E9474DBB1E0CC87300719188 /* HJGVideoPlayActivityView.h */,
+				E9474DBC1E0CC87300719188 /* HJGVideoPlayActivityView.m */,
+				E9474DBE1E0CC89300719188 /* HJGVideoPlayPaihangView.h */,
+				E9474DBF1E0CC89300719188 /* HJGVideoPlayPaihangView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1764,6 +1800,7 @@
 				E9C45B8D1D9B95D600070852 /* more_game_selected@2x.png in Resources */,
 				E9C45ADC1D9B95D600070852 /* ic_level_bj_04_no@2x.png in Resources */,
 				E9C45A9C1D9B95D600070852 /* btn_setting_zhong_normal@2x.png in Resources */,
+				E9474DB11E0CC18F00719188 /* venues_slide@3x.png in Resources */,
 				E9C45B961D9B95D600070852 /* movie_back_s@2x.png in Resources */,
 				E9C45B3E1D9B95D600070852 /* ic_medal_28@2x.png in Resources */,
 				E9C45AD41D9B95D600070852 /* ic_letter@2x.png in Resources */,
@@ -1996,6 +2033,7 @@
 				E9C45B481D9B95D600070852 /* ic_new_02@2x.png in Resources */,
 				E9C45B421D9B95D600070852 /* ic_medium_pressed@2x.png in Resources */,
 				E9C45A801D9B95D600070852 /* btn_bq_normal@2x.png in Resources */,
+				E9474DB01E0CC18F00719188 /* venues_slide@2x.png in Resources */,
 				E9C45B391D9B95D600070852 /* ic_medal_23@2x.png in Resources */,
 				E9C45A791D9B95D600070852 /* brightness_2@2x.png in Resources */,
 				E9C45A871D9B95D600070852 /* btn_face@2x.png in Resources */,
@@ -2167,17 +2205,20 @@
 				E997F2A81D9BFC59007C2FC1 /* HJGCycleModel.m in Sources */,
 				E9783D3D1D9D0DC7006EFF71 /* Utilities.m in Sources */,
 				E9783D341D9CF89E006EFF71 /* HJGGameCellModel.m in Sources */,
+				E9474DB71E0CC82F00719188 /* HJGVideoPlayAvatarView.m in Sources */,
 				E9783D371D9D0A30006EFF71 /* HJGVideoPlayController.m in Sources */,
 				E9ABD55C1E0B78E90074C1B8 /* HJGGameListController.m in Sources */,
 				E9C45BE01D9BA16E00070852 /* HJGHomeCell.m in Sources */,
 				E9C45C131D9BA20000070852 /* SDCollectionViewCell.m in Sources */,
 				E9A572CF1D9CC3AC000EC4B6 /* HJGMenueHeader.m in Sources */,
 				E9C45BE31D9BA18600070852 /* HJGLiveController.m in Sources */,
+				E9474DC01E0CC89300719188 /* HJGVideoPlayPaihangView.m in Sources */,
 				E9C45BEB1D9BA1AA00070852 /* HJGNavigationController.m in Sources */,
 				E9C45BFA1D9BA1F600070852 /* NSString+SizeFont.m in Sources */,
 				E9C45C141D9BA20000070852 /* SDCycleScrollView.m in Sources */,
 				E9C45BF11D9BA1BF00070852 /* HJGNetworkManger.m in Sources */,
 				E997F2A51D9BFC13007C2FC1 /* HJGHomeSectionModel.m in Sources */,
+				E9474DBD1E0CC87300719188 /* HJGVideoPlayActivityView.m in Sources */,
 				E9A572CC1D9CB86A000EC4B6 /* HJGCycleListModel.m in Sources */,
 				E9C45BDA1D9BA14400070852 /* HJGHomePageController.m in Sources */,
 				E9C45C101D9BA20000070852 /* TAAnimatedDotView.m in Sources */,
@@ -2188,12 +2229,15 @@
 				E9C45C0E1D9BA20000070852 /* NSData+SDDataCache.m in Sources */,
 				E9783D311D9CEEFD006EFF71 /* HJGGameCell.m in Sources */,
 				E9C45C151D9BA20000070852 /* UIView+SDExtension.m in Sources */,
+				E9474DB41E0CC76A00719188 /* HJGVideoPlayMenueView.m in Sources */,
 				E9C45BF51D9BA1D300070852 /* HJGHomeCycleView.m in Sources */,
 				E9783D3A1D9D0AFE006EFF71 /* HJGPlayVideoView.m in Sources */,
 				E9C45BDD1D9BA16100070852 /* HJGGameController.m in Sources */,
+				E9474DBA1E0CC85600719188 /* HJGVideoPlayChatView.m in Sources */,
 				E9C45C121D9BA20000070852 /* TAPageControl.m in Sources */,
 				E9C458B61D9B948800070852 /* main.m in Sources */,
 				E9C45BEC1D9BA1AA00070852 /* HJGTabBarController.m in Sources */,
+				E9474DAD1E0CBFCB00719188 /* HJGVideoPlaySelectedView.m in Sources */,
 				E997F2A21D9BFBAC007C2FC1 /* HJGCollectionCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
