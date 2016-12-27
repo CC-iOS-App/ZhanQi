@@ -1,14 +1,6 @@
 # ZhanQi
 战旗tv软件
 ###一言不合就上项目截图
-![app首页.gif](http://upload-images.jianshu.io/upload_images/2011313-d374692531d54077.gif?imageMogr2/auto-orient/strip)
-
-![app直播.gif](http://upload-images.jianshu.io/upload_images/2011313-053f092673e4b386.gif?imageMogr2/auto-orient/strip)
-
-![
-![app我的.gif](http://upload-images.jianshu.io/upload_images/2011313-f007e5671ac4686f.gif?imageMogr2/auto-orient/strip)
-](http://upload-images.jianshu.io/upload_images/2011313-a6780ca00c292c80.gif?imageMogr2/auto-orient/strip)
-
 9月份利用空余时间把app的主体部分写好了，不过直播界面存在一个很大的bug，下面截图上的两个重要的框架没导入，每次进入到这个直播拉流的界面时，程序就崩溃，全局断点一点作用都没有，前几天逛简书看到一哥们写的一个播放器，才知道自己的bug出在哪里。给自己一个教训吧
 ![bug截图.png](http://upload-images.jianshu.io/upload_images/2011313-1c4ba7dfed840601.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
